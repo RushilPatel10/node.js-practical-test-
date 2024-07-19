@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template" />
+  <meta name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Product Admin </title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+  <!-- Custom CSS -->
+  <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="../dist/css/style.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #000000;
+    }
+
+    .page-wrapper {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+
+    .ggs {
+      background-color: #000000;
+    }
+
+    .card-body {
+      background-color: #ffffffda;
+    }
+
+    .card img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="lds-ripple">
+      <div class="lds-pos"></div>
+      <div class="lds-pos"></div>
+    </div>
+  </div>
+
+  <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+    data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+    <%- include('./partials/header') %>
+
+      <!-- ============================================================== -->
+      <%- include('./partials/aside') %>
+
+        <!-- flash message -->
+        <div class="page-wrapper flex-grow-1 p-6">
+          <% if (messages && messages.length> 0) { %>
+            <% messages.forEach(message=> { %>
+              <% if (message==="ProductAdded" ) { %>
+                <div class="alert alert-info">New Product Added Successfully</div>
+                <% } %>
+                  <% if (message==="deleteProduct" ) { %>
+                    <div class="alert alert-info">Deleted Product Successfully</div>
+                    <% } %>
+                      <% if (message==="UpadteProduct" ) { %>
+                        <div class="alert alert-info">Product Updated Successfully</div>
+                        <% } %>
+                          <% }) %>
+                            <% } %>
+
+                              <!-- catagory flash message -->
+                              <% if (messages && messages.length> 0) { %>
+                                <% messages.forEach(message=> { %>
+                                  <% if (message==="CatAdded" ) { %>
+                                    <div class="mt-4 p-2 bg-green-200 text-green-800 rounded">New Category Added
+                                      Successfully</div>
+                                    <% } %>
+                                      <% if (messages && messages.length> 0) { %>
+                                        <% messages.forEach(message=> { %>
+                                          <% if (message==="subCatAdded" ) { %>
+                                            <div class="mt-4 p-2 bg-green-200 text-green-800 rounded">New SubCategory
+                                              Added Successfully</div>
+                                            <% } %>
+                                              <% if (message==="extCatAdded" ) { %>
+                                                <div class="alert alert-info">New ExtraCategory Added Successfully</div>
+                                                <% } %>
+                                                  <% }) %>
+                                                    <% } %>
+                                                      <% }) %>
+                                                        <% } %>
+
+                                                          <div class="row">
+                                                            <div class="col-md-4 ggs">
+                                                              <div class="card ms-4">
+                                                                <div class="card-body">
+                                                                  <img
+                                                                    src="https://m.media-amazon.com/images/I/710-B3pVSLL._SY466_.jpg"
+                                                                    alt="img" class="img-fluid mb-3">
+                                                                  <h4 class="card-title">Mahayoddha Kalki
+                                                                  </h4>
+                                                                  <h5 class="card-text">₹599</h5>
+                                                                  <p class="card-text">
+                                                                    Mahayoddha Kalki: Sword Of Shiva By Kevin Missal
+                                                                    (Book 3) - A Masterpiece On Mythological Fiction.
+                                                                  </p>
+                                                                  <a href="#" class="btn btn-primary">Edit</a>
+                                                                  <a href="#" class="btn btn-danger">Delete</a>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-4 ggs">
+                                                              <div class="card">
+                                                                <div class="card-body">
+                                                                  <img
+                                                                    src="https://m.media-amazon.com/images/I/918vVJ3ez1L._SY466_.jpg"
+                                                                    alt="img" class="img-fluid mb-3">
+                                                                  <h4 class="card-title">HARRY POTTER AND THE CURSED
+                                                                    CHILD</h4>
+                                                                  <h5 class="card-text">₹1999</h5>
+                                                                  <p class="card-text">HARRY POTTER AND THE CURSED CHILD
+                                                                    - PARTS ONE AND TWO: THE OFFICIAL PLAYSCRIPT OF THE
+                                                                    ORIGINAL WEST.</p>
+                                                                  <a href="#" class="btn btn-primary">Edit</a>
+                                                                  <a href="#" class="btn btn-danger">Delete</a>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-4 ggs">
+                                                              <div class="card">
+                                                                <div class="card-body">
+                                                                  <img
+                                                                    src="https://m.media-amazon.com/images/I/61ExB5eOiBL._SY445_SX342_.jpg"
+                                                                    alt="img" class="img-fluid mb-3">
+                                                                  <h4 class="card-title">Naruto 3-In-1 Edition</h4>
+                                                                  <h5 class="card-text">₹830</h5>
+                                                                  <p class="card-text">Naruto 3-In-1 Edition 01:
+                                                                    Includes vols. 1, 2 & 3: Volume 1 Paperback.
+                                                                  </p>
+                                                                  <a href="#" class="btn btn-primary">Edit</a>
+                                                                  <a href="#" class="btn btn-danger">Delete</a>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <% ProductData.forEach((product)=> { %>
+                                                              <div class="col-md-4">
+                                                                <div class="card">
+                                                                  <div class="card-body">
+                                                                    <img src="<%= product.image %>" alt="img"
+                                                                      class="img-fluid mb-3">
+                                                                    <h4 class="card-title">
+                                                                      <%= product.productname %>
+                                                                    </h4>
+                                                                    <h5 class="card-text">
+                                                                      <%= product.productprice %>
+                                                                    </h5>
+                                                                    <p class="card-text">
+                                                                      <%= product.description %>
+                                                                    </p>
+                                                                    <a href="/product/editProduct/<%= product._id %>"
+                                                                      class="btn btn-primary">Edit</a>
+                                                                    <a href="/product/delete/<%= product._id %>"
+                                                                      class="btn btn-danger">Delete</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <% }) %>
+                                                          </div>
+        </div>
+
+
+        <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+        <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+        <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+        <script src="../dist/js/waves.js"></script>
+        <script src="../dist/js/sidebarmenu.js"></script>
+        <script src="../dist/js/custom.min.js"></script>
+        <script src="../assets/libs/flot/excanvas.js"></script>
+        <script src="../assets/libs/flot/jquery.flot.js"></script>
+        <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
+        <script src="../assets/libs/flot/jquery.flot.time.js"></script>
+        <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
+        <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
+        <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+        <script src="../dist/js/pages/chart/chart-page-init.js"></script>
+</body>
+
+</html>

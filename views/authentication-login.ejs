@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .custom-shape {
+            background-color: #ffffff;
+            border-radius: 15px;
+        }
+
+        .input-field {
+            background: #ffffff;
+            border-radius: 9999px;
+            padding-left: 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .left-side img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .hover-underline:hover {
+            text-decoration: underline;
+        }
+
+        .hover-bg-orange:hover {
+            background-color: #FF8C42;
+        }
+    </style>
+</head>
+
+<body class="bg-black flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row container p-8 custom-shape">
+        <!-- Left Side -->
+        <div class="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0 left-side">
+            <img src="../assets/images/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg" alt="Illustration">
+        </div>
+        <!-- Right Side -->
+        <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Login</h2>
+            <form action="/local" method="post">
+                <div class="mb-6 relative">
+                    <input type="Username" id="username" name="username"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 placeholder-gray-500 input-field"
+                        placeholder="Enter your Username">
+                </div>
+                <div class="mb-6 relative">
+                    <input type="password" id="password" name="password"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 placeholder-gray-500 input-field"
+                        placeholder="Enter your Password">
+                </div>
+                <button type="submit" class="w-full bg-orange-500 py-2 px-4 rounded-lg ">Sign in</button>
+            </form>
+            <p class="text-gray-600 mt-4 text-center"><a href="javascript:void(0)"
+                    class="text-orange-600 transition duration-300 hover:text-orange-800 hover-underline">Forgot
+                    password?</a></p>
+
+            <p class="mt-4 text-center">Don't have an account? <a href="/signup"
+                    class="text-orange-600 hover:text-orange-800 hover-underline">Sign up here</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
